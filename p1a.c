@@ -27,9 +27,8 @@ int main(void){
 				
 		if( clock_gettime(CLOCK_REALTIME, &start) == -1) { perror("clock gettime");}
 		
-		// Your code goes here //
 		// Matrix C = Matrix A * Matrix B //	
-		//*******************************//
+
 		//naive approach
 		for (i=0; i<n; i++){
 			for(j=0; j< n; j++){
@@ -38,8 +37,6 @@ int main(void){
 				}
 			}
 		}
-
-		//*******************************//
 		
 		if( clock_gettime( CLOCK_REALTIME, &stop) == -1 ) { perror("clock gettime");}		
 		time = (stop.tv_sec - start.tv_sec)+ (double)(stop.tv_nsec - start.tv_nsec)/1e9;
